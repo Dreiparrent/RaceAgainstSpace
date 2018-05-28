@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceAgainstSpace.iOS", "RaceAgainstSpace\RaceAgainstSpace.iOS\RaceAgainstSpace.iOS.csproj", "{DE5EB62B-059E-4804-B001-2FE9C6E5B258}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "RaceAgainstSpace", "RaceAgainstSpace\RaceAgainstSpace\RaceAgainstSpace.shproj", "{EE8F5FF5-782C-44C5-B049-936AA17F09F4}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		RaceAgainstSpace\RaceAgainstSpace\RaceAgainstSpace.projitems*{de5eb62b-059e-4804-b001-2fe9c6e5b258}*SharedItemsImports = 4
+		RaceAgainstSpace\RaceAgainstSpace\RaceAgainstSpace.projitems*{ee8f5ff5-782c-44c5-b049-936aa17f09f4}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		Ad-Hoc|iPhoneSimulator = Ad-Hoc|iPhoneSimulator
+		AppStore|iPhone = AppStore|iPhone
+		AppStore|iPhoneSimulator = AppStore|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Debug|iPhone.Build.0 = Debug|iPhone
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Release|iPhone.ActiveCfg = Release|iPhone
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Release|iPhone.Build.0 = Release|iPhone
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{DE5EB62B-059E-4804-B001-2FE9C6E5B258}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {808019E1-D3D7-4A8C-ABFB-EC81D1D163AB}
+	EndGlobalSection
+EndGlobal
