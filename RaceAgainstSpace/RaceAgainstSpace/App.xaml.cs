@@ -7,6 +7,8 @@ namespace RaceAgainstSpace
 {
 	public partial class App : Application
 	{
+        public static float ScreenHeight { get; set; }
+        public static float ScreenWidth { get; set; }
 
 		public App ()
 		{

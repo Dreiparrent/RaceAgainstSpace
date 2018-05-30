@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Firebase.Core;
 
 namespace RaceAgainstSpace.iOS
 {
@@ -23,6 +24,9 @@ namespace RaceAgainstSpace.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            App.ScreenHeight = (float)UIScreen.MainScreen.Bounds.Height;
+            App.ScreenWidth = (float)UIScreen.MainScreen.Bounds.Width;
+            Firebase.Core.App.Configure();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

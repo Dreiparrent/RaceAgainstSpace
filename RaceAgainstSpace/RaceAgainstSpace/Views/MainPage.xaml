@@ -4,14 +4,14 @@
             xmlns:views="clr-namespace:RaceAgainstSpace.Views"
             x:Class="RaceAgainstSpace.Views.MainPage">
     <TabbedPage.Children>
-        <NavigationPage Title="Browse">
+        <NavigationPage Title="Decks">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_feed.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:ItemsPage />
+                <views:DecksPage />
             </x:Arguments>
         </NavigationPage>
         

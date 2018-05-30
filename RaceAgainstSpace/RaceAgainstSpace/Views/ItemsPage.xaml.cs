@@ -27,11 +27,11 @@ namespace RaceAgainstSpace.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
-            if (item == null)
+            var card = args.SelectedItem as Card;
+            if (card == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(card)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
@@ -46,8 +46,8 @@ namespace RaceAgainstSpace.Views
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+            if (viewModel.Cards.Count == 0)
+                viewModel.LoadCardsCommand.Execute(null);
         }
     }
 }

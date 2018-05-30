@@ -8,11 +8,16 @@ using Xamarin.Forms;
 using RaceAgainstSpace.Models;
 using RaceAgainstSpace.Services;
 
+#if __IOS__
+using RaceAgainstSpace.iOS.Services;
+#endif
+
 namespace RaceAgainstSpace.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+        // public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+        public IFirestore<Card> DataStore => DependencyService.Get<FirestoreService>() ?? new FirestoreService();
 
         bool isBusy = false;
         public bool IsBusy
@@ -26,6 +31,34 @@ namespace RaceAgainstSpace.ViewModels
         {
             get { return title; }
             set { SetProperty(ref title, value); }
+        }
+        bool isLarge;
+        public bool IsLarge {
+            get { return isLarge; }
+            set { SetProperty(ref isLarge, value); }
+        }
+        double width;
+        public double Width
+        {
+            get { return width; }
+            set {
+                SetProperty(ref width, value);
+                if (IsLarge)
+                    SetProperty(ref flexWidth, value / 2);
+                else
+                    SetProperty(ref flexWidth, value);
+            }
+        }
+        double flexWidth;
+        public double FlexWidth
+        {
+            get { return flexWidth; }
+        }
+        Command tapCommand;
+        public Command TapCommand
+        {
+            get { return tapCommand; }
+            set { SetProperty(ref tapCommand, value); }
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,

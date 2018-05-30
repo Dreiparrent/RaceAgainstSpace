@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RaceAgainstSpace.Views.DecksPage"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style x:Key="noWrapStyle" TargetType="FlexLayout">
+            <Setter Property="Wrap" Value="NoWrap"/>
+        </Style>
+        <Style x:Key="wrapStyle" TargetType="FlexLayout">
+            <Setter Property="Wrap" Value="Wrap"/>
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="Aqua" />
+            <Setter Property="BorderColor" Value="Blue" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="CornerRadius" Value="15" />
+            <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        </Style>
+        <Style x:Key="widthStyle"  TargetType="StackLayout">
+            <Setter Property="WidthRequest" Value="{Binding FlexWidth}" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="Blue" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView Orientation="Horizontal">
+        <FlexLayout Style="{DynamicResource flexStyle}">
+            <StackLayout Style="{DynamicResource stackStyle}">
+                <Frame>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding TapCommand}"
+                            CommandParameter="planet"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Planets"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Style="{DynamicResource stackStyle}">
+                <Frame>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding TapCommand}"
+                            CommandParameter="star"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Stars"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Style="{DynamicResource stackStyle}">
+                <Frame>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding TapCommand}"
+                            CommandParameter="anomaly"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Anomalies"/>
+                </Frame>
+            </StackLayout>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

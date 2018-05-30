@@ -11,16 +11,16 @@ namespace RaceAgainstSpace.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Card Card { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
 
-            Item = new Item
+            Card = new Card
             {
                 Text = "Item name",
-                Description = "This is an item description."
+                Subtext = "This is an item description."
             };
 
             BindingContext = this;
@@ -28,7 +28,7 @@ namespace RaceAgainstSpace.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+            MessagingCenter.Send(this, "AddItem", Card);
             await Navigation.PopModalAsync();
         }
     }
